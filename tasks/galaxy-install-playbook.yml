@@ -1,6 +1,6 @@
 ---
 - name: Run the Galaxy installation playbook.
-  command: "ansible-playbook -i inventory install.yml -e host_port={{ galaxy_host_port }}"
+  command: "ansible-playbook -i inventory galaxy.yml -e host_port={{ galaxy_host_port }}"
   args:
     chdir: "{{ galaxy_repo_dir }}/installer"
     creates: /etc/galaxy_playbook_complete
