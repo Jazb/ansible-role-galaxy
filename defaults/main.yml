@@ -1,7 +1,7 @@
 ---
 galaxy_repo: https://github.com/ansible/galaxy.git
 galaxy_repo_dir: "~/galaxy"
-galaxy_version: devel
+galaxy_version: develop
 galaxy_keep_updated: yes
 galaxy_run_install_playbook: yes
 galaxy_host_port: 3001
