@@ -17,5 +17,12 @@
     force: yes
     accept_hostkey: yes
 
+- name: Fixed Galaxy template compose to use bridge pre-exist network.
+  copy:
+    src: compose.yml.j2
+    dest: "{{galaxy_repo_dir}}/installer/roles/local_docker/templates/compose.yml.j2"
+
 - include: galaxy-install-playbook.yml
   when: galaxy_run_install_playbook
+
+
