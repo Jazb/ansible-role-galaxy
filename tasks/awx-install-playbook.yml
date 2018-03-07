@@ -1,0 +1,12 @@
+---
+- name: Run the AWX installation playbook.
+  command: "ansible-playbook -i inventory install.yml -e host_port={{ galaxy_host_port }}"
+  args:
+    chdir: "{{ galaxy_repo_dir }}/installer"
+    creates: /etc/galaxy_playbook_complete
+
+- name: Create a file to mark whether this playbook has completed.
+  file:
+    path: /etc/galaxy_playbook_complete
+    state: touch
+  changed_when: False
